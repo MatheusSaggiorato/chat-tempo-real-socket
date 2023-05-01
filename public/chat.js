@@ -1,6 +1,6 @@
 const room = window.location.pathname.replace(/\//g, '')
 
-const socket = io(`http://localhost:3000/${room}`);
+const socket = io(`https://chat-tempo-real.vercel.app/${room}`);
 
 let user = null;
 
