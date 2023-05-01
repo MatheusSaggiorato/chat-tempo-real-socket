@@ -2,11 +2,12 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const socketIo = require('socket.io');
+const port = process.env.PORT || 3000;
 
 app.use('/grupo1', express.static(path.join(__dirname, 'public')))
 app.use('/grupo2', express.static(path.join(__dirname, 'public')))
 
-const server = app.listen(3000, () => {
+const server = app.listen(port, () => {
     console.log("Server running")
 })
 
